@@ -12,9 +12,9 @@ export default (description, getQuestionAnswer) => {
 
   for (let i = 0; i < countRound; i += 1) {
     const [question, currecAnswer] = getQuestionAnswer();
-    console.log(`Question: ${question}`); // 15
+    console.log(`Question: ${question}`);
 
-    const answer = readlineSync.question('Your answer: '); // no
+    const answer = readlineSync.question('Your answer: ');
 
     if (answer === currecAnswer) {
       console.log('Correct!');
