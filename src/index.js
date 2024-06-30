@@ -20,10 +20,12 @@ export default (description, getQuestionAnswer) => {
       console.log('Correct!');
     } else {
       console.log(
+        // eslint-disable-next-line comma-dangle
         `${answer} is wrong answer ;(. Correct answer was ${currecAnswer}.`
       );
 
       console.log(`Let's try again, ${name}!`);
+      return;
     }
   }
   console.log(`Congratulation, ${name}!`);
