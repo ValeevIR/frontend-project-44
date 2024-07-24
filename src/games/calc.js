@@ -10,25 +10,20 @@ function randomInteger(min, max) {
 }
 
 const getQuestionAndAnswer = () => {
-  let currecAnswer = 0;
   const num1 = randomInteger(1, 30);
   const num2 = randomInteger(1, 30);
   const operation = randomInteger(0, 2);
   const question = `${num1} ${action[operation]} ${num2}`;
   switch (action[operation]) {
     case '+':
-      currecAnswer = num1 + num2;
-      break;
+      return [question, (num1 + num2).toString()];
     case '-':
-      currecAnswer = num1 - num2;
-      break;
+      return [question, (num1 - num2).toString()];
     case '*':
-      currecAnswer = num1 * num2;
-      break;
+      return [question, (num1 * num2).toString()];
     default:
+      throw new Error(`Unknown operation: '${action[operation]}'!`);
   }
-
-  return [question, currecAnswer.toString()];
 };
 
 export default () => {
