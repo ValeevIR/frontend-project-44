@@ -1,18 +1,19 @@
 import game from '../index.js';
+import randomInteger from './rnd.js';
 
 const description = 'What is the result of the expression?';
 
 const action = ['+', '-', '*'];
 
-function randomInteger(min, max) {
-  const rand = min + Math.random() * (max + 1 - min);
-  return Math.floor(rand);
-}
-
 const getQuestionAndAnswer = () => {
-  const num1 = randomInteger(1, 30);
-  const num2 = randomInteger(1, 30);
-  const operation = randomInteger(0, 2);
+  const beginIntervalNum = 1;
+  const endIntervalNum = 30;
+  const beginIntervalOperation = 0;
+  const EndIntervalOperation = 2;
+
+  const num1 = randomInteger(beginIntervalNum, endIntervalNum);
+  const num2 = randomInteger(beginIntervalNum, endIntervalNum);
+  const operation = randomInteger(beginIntervalOperation, EndIntervalOperation);
   const question = `${num1} ${action[operation]} ${num2}`;
   switch (action[operation]) {
     case '+':

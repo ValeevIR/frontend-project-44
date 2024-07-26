@@ -1,4 +1,5 @@
 import game from '../index.js';
+import randomInteger from './rnd.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -11,13 +12,11 @@ const isPrime = (num) => {
   return true;
 };
 
-function randomInteger(min, max) {
-  const rand = min + Math.random() * (max + 1 - min);
-  return Math.floor(rand);
-}
-
 const getQuestionAndAnswer = () => {
-  const question = randomInteger(1, 100);
+  const beginInterval = 1;
+  const endInterval = 100;
+
+  const question = randomInteger(beginInterval, endInterval);
   const currecAnswer = isPrime(question) ? 'yes' : 'no';
 
   return [question, currecAnswer];
