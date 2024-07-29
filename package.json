@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "Проект Игры разума. Состоит из 5 игр",
+  "description": "Проект Игры разума. Состоит из 5 игр!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
