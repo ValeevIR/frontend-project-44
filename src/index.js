@@ -28,5 +28,5 @@ export default (description, getQuestionAnswer) => {
       return;
     }
   }
-  console.log(`Congratulation, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
 };
