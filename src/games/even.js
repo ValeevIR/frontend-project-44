@@ -10,9 +10,9 @@ const getQuestionAndAnswer = () => {
   const endInterval = 9;
 
   const question = randomInteger(beginInterval, endInterval);
-  const currecAnswer = isEven(question) ? 'yes' : 'no';
+  const answer = isEven(question) ? 'yes' : 'no';
 
-  return [question, currecAnswer];
+  return [question, answer];
 };
 
 export default () => {
