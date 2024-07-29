@@ -3,6 +3,26 @@
 [![Actions Status](https://github.com/ValeevIR/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/ValeevIR/frontend-project-44/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/cd0f3cb087c2d0055c83/maintainability)](https://codeclimate.com/github/ValeevIR/frontend-project-44/maintainability)
 
+## Минимальные требования
+
+Версия Npm - 10.8.2
+Версия Node.js - 21.5.0
+
+## Инструкция по установке и запуску
+
+Клонирование репозитория
+git clone https://github.com/ValeevIR/frontend-project-44.git
+
+Установка зависимостей
+npm ci
+
+Запуск игр
+Игра "Проверка на чётность": brain-even
+Игра "Калькулятор": brain-calc
+Игра "НОД": brain-gcd
+Игра "Арифметическая прогрессия": brain-progression
+Игра "Простое ли число?": brain-prime
+
 ## Игра "Проверка на чётность"
 
 Необходимо реализовать игру "Проверка на чётность". Суть игры в следующем: пользователю показывается случайное число. И ему нужно ответить yes, если число чётное, или no — если нечётное.
