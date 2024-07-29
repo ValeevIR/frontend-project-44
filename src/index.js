@@ -11,17 +11,17 @@ export default (description, getQuestionAnswer) => {
   console.log(description);
 
   for (let i = 0; i < countRound; i += 1) {
-    const [question, currecAnswer] = getQuestionAnswer();
+    const [question, correctAnswer] = getQuestionAnswer();
     console.log(`Question: ${question}`);
 
     const answer = readlineSync.question('Your answer: ');
 
-    if (answer === currecAnswer) {
+    if (answer === correctAnswer) {
       console.log('Correct!');
     } else {
       console.log(
         // eslint-disable-next-line comma-dangle
-        `${answer} is wrong answer ;(. Correct answer was ${currecAnswer}.`
+        `${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.`
       );
 
       console.log(`Let's try again, ${name}!`);
