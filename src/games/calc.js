@@ -5,6 +5,19 @@ const description = 'What is the result of the expression?';
 
 const action = ['+', '-', '*'];
 
+const expression = (a, b, operation) => {
+  switch (operation) {
+    case '+':
+      return (a + b).toString();
+    case '-':
+      return (a - b).toString();
+    case '*':
+      return (a * b).toString();
+    default:
+      throw new Error(`Unknown operation: '${operation}'!`);
+  }
+};
+
 const getQuestionAndAnswer = () => {
   const beginIntervalNum = 1;
   const endIntervalNum = 30;
@@ -15,16 +28,7 @@ const getQuestionAndAnswer = () => {
   const num2 = randomInteger(beginIntervalNum, endIntervalNum);
   const operation = randomInteger(beginIntervalOperation, endIntervalOperation);
   const question = `${num1} ${action[operation]} ${num2}`;
-  switch (action[operation]) {
-    case '+':
-      return [question, (num1 + num2).toString()];
-    case '-':
-      return [question, (num1 - num2).toString()];
-    case '*':
-      return [question, (num1 * num2).toString()];
-    default:
-      throw new Error(`Unknown operation: '${action[operation]}'!`);
-  }
+  return [question, expression(num1, num2, action[operation])];
 };
 
 export default () => {
