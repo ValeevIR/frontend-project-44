@@ -17,9 +17,9 @@ const getQuestionAndAnswer = () => {
   const endInterval = 100;
 
   const question = randomInteger(beginInterval, endInterval);
-  const currecAnswer = isPrime(question) ? 'yes' : 'no';
+  const answer = isPrime(question) ? 'yes' : 'no';
 
-  return [question, currecAnswer];
+  return [question, answer];
 };
 
 export default () => {

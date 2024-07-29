@@ -17,9 +17,9 @@ const getQuestionAndAnswer = () => {
   const num1 = randomInteger(beginInterval, endInterval);
   const num2 = randomInteger(beginInterval, endInterval);
   const question = `${num1} ${num2}`;
-  const currecAnswer = gcd(num1, num2);
+  const answer = gcd(num1, num2);
 
-  return [question, currecAnswer.toString()];
+  return [question, answer.toString()];
 };
 
 export default () => {
