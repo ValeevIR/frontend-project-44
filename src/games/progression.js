@@ -2,21 +2,23 @@ import game from '../index.js';
 import randomInteger from './rnd.js';
 
 const description = 'What number is missing in the progression?';
-const progressionNumber = 10;
 
-const getProgression = (firstElement, step) => {
+const getProgression = (firstElement, step, number) => {
   const arr = [];
   arr[0] = firstElement;
-  for (let i = 0; i < progressionNumber - 1; i += 1) {
+  for (let i = 0; i < number - 1; i += 1) {
     arr[i + 1] = arr[i] + step;
   }
   return arr;
 };
 
 const getQuestionAndAnswer = () => {
+  const progressionNumber = 10;
+
   const beginInterval = 1;
-  const endInterval = 5;
+  const endInterval = 6;
   const ratioIncrease = 6;
+
   const beginIntervalHidden = 0;
   const endIntervalHidden = progressionNumber - 1;
 
@@ -25,7 +27,7 @@ const getQuestionAndAnswer = () => {
 
   const hiddenElement = randomInteger(beginIntervalHidden, endIntervalHidden);
 
-  const progression = getProgression(firstElement, step);
+  const progression = getProgression(firstElement, step, progressionNumber);
   const answer = progression[hiddenElement];
   progression[hiddenElement] = '..';
   const question = progression.join(' ');
